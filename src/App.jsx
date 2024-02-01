@@ -1,3 +1,4 @@
+import Signup from "./leyaouts/Signup"
 
 
 function App() {
@@ -5,7 +6,7 @@ function App() {
 
   return (
     <>
-     
+     <Signup/>
     </>
   )
 }
