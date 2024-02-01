@@ -2,5 +2,7 @@ import { configureStore } from '@reduxjs/toolkit'
 import userSlice from './userSlice'
 
 export const store = configureStore({
- userInfo:userSlice
+ reducer:{
+    userLoginInfo:userSlice
+ }
 })

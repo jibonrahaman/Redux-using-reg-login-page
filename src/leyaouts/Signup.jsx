@@ -1,8 +1,11 @@
 import { useState } from "react"
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { userLoginInfo } from "../slices/userSlice";
 function Signup() {
+    const dispatch =useDispatch();
     const navigate =useNavigate();
     const [email,setemail] =useState('');
     const [name,setname] =useState('');
@@ -28,7 +31,20 @@ function Signup() {
     toast.error("Password is required")
  }
  if(email && password && name){
-    navigate("/login")
+   dispatch(userLoginInfo({
+    name:name,
+    email:email,
+    password:password
+   }))
+//    localStorage.setItem("userLoginInfo", JSON.stringify(userLoginInfo({
+//     name:name,
+//     password:password,
+//     email:email
+//    })))
+   setTimeout(() => {
+    
+       navigate("/login")
+   }, 1000);
  }
     }
   return (
