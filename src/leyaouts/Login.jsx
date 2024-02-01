@@ -13,7 +13,7 @@ function Login() {
     }
   return (
     <div className=" mx-10 max-w-screen-lg">
-      <h2>Registration</h2>
+      <h2>Login</h2>
       <div className=" flex flex-col gap-y-5">
         <input onChange={handleEmail} className="border py-2 px-4" type="text" placeholder="email" /> 
 
